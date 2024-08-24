@@ -9,13 +9,15 @@ TETRIS_INV.CONFIG.PickupDistance = 7500 -- How far away a player can pick up ite
 TETRIS_INV.CONFIG.IsWhitelist = true -- Whether the list is a blacklist or whitelist
 TETRIS_INV.CONFIG.ListedEntities = { -- Entities that can/cant be picked up
     ["prop_physics"] = true, -- Value in [] is the entity class
-    ["spawned_weapon"] = true
+    ["spawned_weapon"] = true,
+    ["weapon_rpg"] = true
 }
 
 TETRIS_INV.CONFIG.DefaultSize = { 2, 2 } -- The default item size (width, height)
 TETRIS_INV.CONFIG.CustomSizes = { -- Custom item sizes entity/weapon class and then (width, height)
     ["ent_class"] = { 2, 4 },
     ["weapon_class"] = { 4, 4 },
+    ["weapon_rpg"] = { 4, 3 },
 
     -- DarkRP Weapons
     ["weapon_ak472"] = { 4, 2 },
