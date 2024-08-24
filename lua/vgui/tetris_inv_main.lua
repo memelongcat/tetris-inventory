@@ -75,11 +75,13 @@ function PANEL:Init()
             slotPanel:SetPos( (col-1)*(slotSize+slotSpacing), (row-1)*(slotSize+slotSpacing) )
             slotPanel:SetSize( slotSize, slotSize )
             slotPanel.Paint = function( self2, w, h )
+                --[[
                 TETRIS_INV.FUNC.BeginShadow( uniqueID )
                 local x, y = self2:LocalToScreen( 0, 0 )
                 surface.SetDrawColor( 0, 0, 0 )
                 surface.DrawRect( x, y, w, h )
                 TETRIS_INV.FUNC.EndShadow( uniqueID, x, y, 1, 1, 1, 150, 0, 0, true )
+                ]]
 
                 surface.SetDrawColor( 175, 175, 175, 25 )
                 surface.DrawRect( 0, 0, w, h )
@@ -307,11 +309,13 @@ end
 function PANEL:OnRemove()
     gui.EnableScreenClicker( false )
 
+    --[[
     for row = 1, TETRIS_INV.CONFIG.GridY do
         for col = 1, TETRIS_INV.CONFIG.GridX do
             TETRIS_INV.FUNC.DeleteShadow( "tetris_inv_slot_" .. row .. "_" .. col )
         end
     end
+    ]]
 end
 
 function PANEL:Paint( w, h )

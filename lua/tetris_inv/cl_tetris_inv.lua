@@ -85,12 +85,14 @@ hook.Add( "HUDPaint", "TetrisInv.HUDPaint.DrawPickup", function()
 
 	local x, y = ScrW()/2-w/2, ScrH()*0.8-h/2
 
-	-- Draw shadow
+	-- Draw shadow 
+	--[[
 	TETRIS_INV.FUNC.BeginShadow( "test" )
 	surface.SetDrawColor( 0, 0, 0 )
 	surface.DrawRect( x, y, w, h )
 	TETRIS_INV.FUNC.EndShadow( "test", x, y, 1, 1, 1, 100, 0, 0, true )
-
+	]]
+	
 	-- Draw blur
 	surface.SetDrawColor( 255, 255, 255 )
     surface.SetMaterial( blur )
